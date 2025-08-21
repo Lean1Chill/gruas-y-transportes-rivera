@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+#servicios-camion {
+    background: var(--bg-light);
+    padding: 50px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.servicios-container {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.subtitulo {
+    color: #e65100;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    animation: bounceText 2s infinite ease-in-out;
+}
+
+.titulo-principal {
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease forwards;
+}
+
+.descripcion {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.lista-servicios {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 30px auto;
+    text-align: left;
+    max-width: 750px;
+}
+
+.lista-servicios li {
+    margin: 10px 0;
+    font-size: 1.05em;
+    line-height: 1.6;
+    padding-left: 25px;
+    position: relative;
+    opacity: 0;
+    animation: slideUp 0.6s ease forwards;
+}
+
+.lista-servicios li::before {
+    content: "✔";
+    color: #d45525;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    animation: rotateCheck 1s infinite alternate ease-in-out;
+}
+
+.lista-servicios li:nth-child(1) { animation-delay: 0.2s; }
+.lista-servicios li:nth-child(2) { animation-delay: 0.4s; }
+.lista-servicios li:nth-child(3) { animation-delay: 0.6s; }
+.lista-servicios li:nth-child(4) { animation-delay: 0.8s; }
+.lista-servicios li:nth-child(5) { animation-delay: 1s; }
+
+.mensaje-final {
+    font-size: 1.05em;
+    color: #444;
+    font-weight: 500;
+}
+
+.social-linkss {
+    margin-top: 5px;
+}
+
+.social-linkss a {
+    color: var(--white);
+    font-size: 28px;
+    margin: 0 60px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-linkss a:hover {
+    color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounceText {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); color: orange; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes rotateCheck {
+    from { transform: rotate(-10deg); }
+    to { transform: rotate(10deg); }
+}
